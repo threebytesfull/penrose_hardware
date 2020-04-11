@@ -1,0 +1,560 @@
+EESchema Schematic File Version 4
+LIBS:penrose-cache
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 3
+Title "Penrose"
+Date "2020-01-05"
+Rev "3"
+Comp "Rufus Cable"
+Comment1 "ThreeBytesFull"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:D_Schottky_Small D?
+U 1 1 5E2F658A
+P 3450 1900
+AR Path="/5E2F658A" Ref="D?"  Part="1" 
+AR Path="/5E2DF3BB/5E2F658A" Ref="D37"  Part="1" 
+F 0 "D37" H 3450 1695 50  0000 C CNN
+F 1 "BAT60JFILM" H 3450 1786 50  0000 C CNN
+F 2 "penrose_lib:D_SOD-323_HandSoldering" V 3450 1900 50  0001 C CNN
+F 3 "~" V 3450 1900 50  0001 C CNN
+	1    3450 1900
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:USB_B_Micro J?
+U 1 1 5E2F6590
+P 1350 2100
+AR Path="/5E2F6590" Ref="J?"  Part="1" 
+AR Path="/5E2DF3BB/5E2F6590" Ref="J1"  Part="1" 
+F 0 "J1" H 1407 2567 50  0000 C CNN
+F 1 "DX4R005HJ5R2000" H 1407 2476 50  0000 C CNN
+F 2 "penrose_lib:DX4R005HJ5_HandSolder" H 1500 2050 50  0001 C CNN
+F 3 "~" H 1500 2050 50  0001 C CNN
+	1    1350 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:MCP1825S U?
+U 1 1 5E2F6596
+P 5200 1550
+AR Path="/5E2F6596" Ref="U?"  Part="1" 
+AR Path="/5E2DF3BB/5E2F6596" Ref="U4"  Part="1" 
+F 0 "U4" H 5200 1792 50  0000 C CNN
+F 1 "MCP1825S" H 5200 1701 50  0000 C CNN
+F 2 "penrose_lib:SOT-223-3_TabPin2" H 5100 1700 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/devicedoc/22056b.pdf" H 5200 1800 50  0001 C CNN
+	1    5200 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E2F659C
+P 1350 2700
+AR Path="/5E2F659C" Ref="#PWR?"  Part="1" 
+AR Path="/5E2DF3BB/5E2F659C" Ref="#PWR0117"  Part="1" 
+F 0 "#PWR0117" H 1350 2450 50  0001 C CNN
+F 1 "GND" H 1355 2527 50  0000 C CNN
+F 2 "" H 1350 2700 50  0001 C CNN
+F 3 "" H 1350 2700 50  0001 C CNN
+	1    1350 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 2500 1350 2600
+Wire Wire Line
+	1250 2500 1250 2600
+Wire Wire Line
+	1250 2600 1350 2600
+Connection ~ 1350 2600
+Wire Wire Line
+	1350 2600 1350 2700
+$Comp
+L Device:Ferrite_Bead_Small FB?
+U 1 1 5E2F65A7
+P 2700 1900
+AR Path="/5E2F65A7" Ref="FB?"  Part="1" 
+AR Path="/5E2DF3BB/5E2F65A7" Ref="FB1"  Part="1" 
+F 0 "FB1" V 2463 1900 50  0000 C CNN
+F 1 "MPZ2012S601AT000" V 2554 1900 50  0000 C CNN
+F 2 "penrose_lib:L_0805_2012Metric" V 2630 1900 50  0001 C CNN
+F 3 "~" H 2700 1900 50  0001 C CNN
+	1    2700 1900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2800 1900 3350 1900
+$Comp
+L Device:R_Small R?
+U 1 1 5E2F65B5
+P 1950 2100
+AR Path="/5E2F65B5" Ref="R?"  Part="1" 
+AR Path="/5E2DF3BB/5E2F65B5" Ref="R6"  Part="1" 
+F 0 "R6" V 1850 2000 50  0000 C CNN
+F 1 "27" V 1850 2200 50  0000 C CNN
+F 2 "penrose_lib:R_0603_1608Metric" H 1950 2100 50  0001 C CNN
+F 3 "~" H 1950 2100 50  0001 C CNN
+	1    1950 2100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5E2F65BB
+P 1950 2200
+AR Path="/5E2F65BB" Ref="R?"  Part="1" 
+AR Path="/5E2DF3BB/5E2F65BB" Ref="R7"  Part="1" 
+F 0 "R7" V 2050 2100 50  0000 C CNN
+F 1 "27" V 2050 2300 50  0000 C CNN
+F 2 "penrose_lib:R_0603_1608Metric" H 1950 2200 50  0001 C CNN
+F 3 "~" H 1950 2200 50  0001 C CNN
+	1    1950 2200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1650 2100 1850 2100
+Wire Wire Line
+	1650 2200 1850 2200
+Text Label 2150 2100 0    50   ~ 0
+USBP
+Text Label 2150 2200 0    50   ~ 0
+USBM
+Wire Wire Line
+	2050 2100 2150 2100
+Wire Wire Line
+	2050 2200 2150 2200
+Text Label 4900 2850 2    50   ~ 0
+VUSB
+$Comp
+L power:GND #PWR?
+U 1 1 5E2F65C8
+P 5000 4650
+AR Path="/5E2F65C8" Ref="#PWR?"  Part="1" 
+AR Path="/5E2DF3BB/5E2F65C8" Ref="#PWR0118"  Part="1" 
+F 0 "#PWR0118" H 5000 4400 50  0001 C CNN
+F 1 "GND" H 5005 4477 50  0000 C CNN
+F 2 "" H 5000 4650 50  0001 C CNN
+F 3 "" H 5000 4650 50  0001 C CNN
+	1    5000 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 4450 5000 4550
+Wire Wire Line
+	5200 4450 5200 4550
+Wire Wire Line
+	5200 4550 5000 4550
+Connection ~ 5000 4550
+Wire Wire Line
+	5000 4550 5000 4650
+Wire Wire Line
+	4400 3350 4300 3350
+Wire Wire Line
+	4300 3350 4300 2950
+Wire Wire Line
+	4300 2950 5200 2950
+Wire Wire Line
+	5200 2950 5200 3050
+NoConn ~ 5800 3550
+NoConn ~ 5800 3650
+NoConn ~ 4400 3950
+NoConn ~ 1650 2300
+Wire Wire Line
+	3550 1900 3650 1900
+Text Label 4400 3750 2    50   ~ 0
+USBP
+Text Label 4400 3650 2    50   ~ 0
+USBM
+$Comp
+L power:GND #PWR?
+U 1 1 5E2F65E5
+P 5200 2050
+AR Path="/5E2F65E5" Ref="#PWR?"  Part="1" 
+AR Path="/5E2DF3BB/5E2F65E5" Ref="#PWR0119"  Part="1" 
+F 0 "#PWR0119" H 5200 1800 50  0001 C CNN
+F 1 "GND" H 5205 1877 50  0000 C CNN
+F 2 "" H 5200 2050 50  0001 C CNN
+F 3 "" H 5200 2050 50  0001 C CNN
+	1    5200 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 1850 5200 2000
+$Comp
+L Device:C_Small C?
+U 1 1 5E2F65EC
+P 4800 1850
+AR Path="/5E2F65EC" Ref="C?"  Part="1" 
+AR Path="/5E2DF3BB/5E2F65EC" Ref="C10"  Part="1" 
+F 0 "C10" H 4892 1896 50  0000 L CNN
+F 1 "470p" H 4892 1805 50  0000 L CNN
+F 2 "penrose_lib:C_0603_1608Metric" H 4800 1850 50  0001 C CNN
+F 3 "~" H 4800 1850 50  0001 C CNN
+	1    4800 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5E2F65F2
+P 4500 1850
+AR Path="/5E2F65F2" Ref="C?"  Part="1" 
+AR Path="/5E2DF3BB/5E2F65F2" Ref="C9"  Part="1" 
+F 0 "C9" H 4592 1896 50  0000 L CNN
+F 1 "4u7" H 4592 1805 50  0000 L CNN
+F 2 "penrose_lib:C_0603_1608Metric" H 4500 1850 50  0001 C CNN
+F 3 "~" H 4500 1850 50  0001 C CNN
+	1    4500 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5E2F65F8
+P 5600 1850
+AR Path="/5E2F65F8" Ref="C?"  Part="1" 
+AR Path="/5E2DF3BB/5E2F65F8" Ref="C11"  Part="1" 
+F 0 "C11" H 5692 1896 50  0000 L CNN
+F 1 "4u7" H 5692 1805 50  0000 L CNN
+F 2 "penrose_lib:C_0603_1608Metric" H 5600 1850 50  0001 C CNN
+F 3 "~" H 5600 1850 50  0001 C CNN
+	1    5600 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 1950 5600 2000
+Wire Wire Line
+	5600 2000 5200 2000
+Connection ~ 5200 2000
+Wire Wire Line
+	5200 2000 5200 2050
+Wire Wire Line
+	4800 1950 4800 2000
+Wire Wire Line
+	4800 2000 5200 2000
+Wire Wire Line
+	4500 1950 4500 2000
+Wire Wire Line
+	4500 2000 4800 2000
+Connection ~ 4800 2000
+Wire Wire Line
+	4800 1750 4800 1550
+Wire Wire Line
+	4800 1550 4900 1550
+Wire Wire Line
+	4500 1750 4500 1550
+Wire Wire Line
+	4500 1550 4800 1550
+Connection ~ 4800 1550
+Wire Wire Line
+	4500 1550 4400 1550
+Connection ~ 4500 1550
+Text Label 4400 1550 2    50   ~ 0
+VUSB
+Wire Wire Line
+	5500 1550 5600 1550
+Wire Wire Line
+	5600 1550 5600 1750
+Wire Wire Line
+	5600 1550 5700 1550
+Connection ~ 5600 1550
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5E2F6613
+P 5700 1450
+AR Path="/5E2F6613" Ref="#PWR?"  Part="1" 
+AR Path="/5E2DF3BB/5E2F6613" Ref="#PWR0120"  Part="1" 
+F 0 "#PWR0120" H 5700 1300 50  0001 C CNN
+F 1 "+3V3" H 5715 1623 50  0000 C CNN
+F 2 "" H 5700 1450 50  0001 C CNN
+F 3 "" H 5700 1450 50  0001 C CNN
+	1    5700 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 1550 5700 1450
+NoConn ~ 5800 3850
+Wire Wire Line
+	5000 3050 5000 2850
+Wire Wire Line
+	5000 2850 4900 2850
+Text Label 3750 1900 0    50   ~ 0
+VUSB
+Text HLabel 6200 3350 2    50   Output ~ 0
+SER_RX
+Text HLabel 6200 3450 2    50   Input ~ 0
+SER_TX
+Wire Wire Line
+	5800 3350 6200 3350
+Wire Wire Line
+	5800 3450 6200 3450
+$Comp
+L Device:LED_Small D38
+U 1 1 5E5FF8B8
+P 6900 1950
+F 0 "D38" V 6946 1882 50  0000 R CNN
+F 1 "SML-D12D1W (orange)" V 6855 1882 50  0000 R CNN
+F 2 "penrose_lib:LED_0603_1608Metric" V 6900 1950 50  0001 C CNN
+F 3 "~" V 6900 1950 50  0001 C CNN
+	1    6900 1950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5E600E9C
+P 6900 1450
+AR Path="/5E600E9C" Ref="#PWR?"  Part="1" 
+AR Path="/5E2DF3BB/5E600E9C" Ref="#PWR0128"  Part="1" 
+F 0 "#PWR0128" H 6900 1300 50  0001 C CNN
+F 1 "+3V3" H 6915 1623 50  0000 C CNN
+F 2 "" H 6900 1450 50  0001 C CNN
+F 3 "" H 6900 1450 50  0001 C CNN
+	1    6900 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R15
+U 1 1 5E602891
+P 6900 1650
+F 0 "R15" H 6959 1696 50  0000 L CNN
+F 1 "240" H 6959 1605 50  0000 L CNN
+F 2 "penrose_lib:R_0603_1608Metric" H 6900 1650 50  0001 C CNN
+F 3 "~" H 6900 1650 50  0001 C CNN
+	1    6900 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0129
+U 1 1 5E60349A
+P 6900 2150
+F 0 "#PWR0129" H 6900 1900 50  0001 C CNN
+F 1 "GND" H 6905 1977 50  0000 C CNN
+F 2 "" H 6900 2150 50  0001 C CNN
+F 3 "" H 6900 2150 50  0001 C CNN
+	1    6900 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 1450 6900 1550
+Wire Wire Line
+	6900 1750 6900 1850
+Wire Wire Line
+	6900 2050 6900 2150
+$Comp
+L Device:LED_Small D39
+U 1 1 5E609186
+P 8400 1950
+F 0 "D39" V 8446 1882 50  0000 R CNN
+F 1 "SML-D12Y1W (yellow)" V 8355 1882 50  0000 R CNN
+F 2 "penrose_lib:LED_0603_1608Metric" V 8400 1950 50  0001 C CNN
+F 3 "~" V 8400 1950 50  0001 C CNN
+	1    8400 1950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R16
+U 1 1 5E60919A
+P 8400 1650
+F 0 "R16" H 8459 1696 50  0000 L CNN
+F 1 "560" H 8459 1605 50  0000 L CNN
+F 2 "penrose_lib:R_0603_1608Metric" H 8400 1650 50  0001 C CNN
+F 3 "~" H 8400 1650 50  0001 C CNN
+	1    8400 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0130
+U 1 1 5E6091A4
+P 8400 2150
+F 0 "#PWR0130" H 8400 1900 50  0001 C CNN
+F 1 "GND" H 8405 1977 50  0000 C CNN
+F 2 "" H 8400 2150 50  0001 C CNN
+F 3 "" H 8400 2150 50  0001 C CNN
+	1    8400 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8400 1350 8400 1550
+Wire Wire Line
+	8400 1750 8400 1850
+Wire Wire Line
+	8400 2050 8400 2150
+Text Label 8400 1350 0    50   ~ 0
+VUSB
+Text Notes 8750 1900 0    50   ~ 0
+5mA at 5V - 2.1V
+Text Notes 7250 1900 0    50   ~ 0
+5mA at 3.3V - 2.1V
+$Comp
+L Device:LED_Small D40
+U 1 1 5E615E2B
+P 6900 3450
+F 0 "D40" V 6946 3382 50  0000 R CNN
+F 1 "SML-D12V1W (red)" V 6855 3382 50  0000 R CNN
+F 2 "penrose_lib:LED_0603_1608Metric" V 6900 3450 50  0001 C CNN
+F 3 "~" V 6900 3450 50  0001 C CNN
+	1    6900 3450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R17
+U 1 1 5E615E37
+P 6900 3150
+F 0 "R17" H 6959 3196 50  0000 L CNN
+F 1 "560" H 6959 3105 50  0000 L CNN
+F 2 "penrose_lib:R_0603_1608Metric" H 6900 3150 50  0001 C CNN
+F 3 "~" H 6900 3150 50  0001 C CNN
+	1    6900 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 2850 6900 3050
+Wire Wire Line
+	6900 3250 6900 3350
+Wire Wire Line
+	6900 3550 6900 3750
+$Comp
+L Device:LED_Small D41
+U 1 1 5E615E46
+P 8400 3450
+F 0 "D41" V 8446 3382 50  0000 R CNN
+F 1 "SML-D12M1W (yellowish green)" V 8355 3382 50  0000 R CNN
+F 2 "penrose_lib:LED_0603_1608Metric" V 8400 3450 50  0001 C CNN
+F 3 "~" V 8400 3450 50  0001 C CNN
+	1    8400 3450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R18
+U 1 1 5E615E4C
+P 8400 3150
+F 0 "R18" H 8459 3196 50  0000 L CNN
+F 1 "560" H 8459 3105 50  0000 L CNN
+F 2 "penrose_lib:R_0603_1608Metric" H 8400 3150 50  0001 C CNN
+F 3 "~" H 8400 3150 50  0001 C CNN
+	1    8400 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8400 2850 8400 3050
+Wire Wire Line
+	8400 3250 8400 3350
+Wire Wire Line
+	8400 3550 8400 3750
+Text Label 8400 2850 0    50   ~ 0
+VUSB
+Text Notes 8750 3400 0    50   ~ 0
+5mA at 5V - 2V
+Text Notes 7250 3400 0    50   ~ 0
+6mA at 5V - 1.95V
+Text Label 6900 2850 0    50   ~ 0
+VUSB
+$Comp
+L Interface_USB:FT230XS U?
+U 1 1 5E2F65AF
+P 5100 3750
+AR Path="/5E2F65AF" Ref="U?"  Part="1" 
+AR Path="/5E2DF3BB/5E2F65AF" Ref="U3"  Part="1" 
+F 0 "U3" H 5450 4450 50  0000 C CNN
+F 1 "FT230XS" H 5450 4350 50  0000 C CNN
+F 2 "penrose_lib:SSOP-16_3.9x4.9mm_P0.635mm_Clear" H 5550 3100 50  0001 C CNN
+F 3 "http://www.ftdichip.com/Products/ICs/FT230X.html" H 5100 3750 50  0001 C CNN
+	1    5100 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 3950 6250 3950
+Wire Wire Line
+	5800 4050 6250 4050
+Wire Wire Line
+	5800 4150 6250 4150
+Text Label 6250 4150 0    50   ~ 0
+~SLEEP
+Text Label 6250 3950 0    50   ~ 0
+~RXLED
+Text Label 6250 4050 0    50   ~ 0
+~TXLED
+Text Label 7000 3750 0    50   ~ 0
+~RXLED
+Text Label 8500 3750 0    50   ~ 0
+~TXLED
+Wire Wire Line
+	6900 3750 7000 3750
+Wire Wire Line
+	8400 3750 8500 3750
+Text Notes 6850 1150 0    50   ~ 0
+Power LEDs
+Wire Notes Line
+	6750 1000 6750 2450
+Wire Notes Line
+	6750 2450 9750 2450
+Wire Notes Line
+	9750 2450 9750 1000
+Wire Notes Line
+	9750 1000 6750 1000
+Text Notes 6900 2700 0    50   ~ 0
+Serial Data LEDs
+Wire Notes Line
+	6750 2550 6750 3850
+Wire Notes Line
+	6750 3850 9750 3850
+Wire Notes Line
+	9750 3850 9750 2550
+Wire Notes Line
+	9750 2550 6750 2550
+Text Notes 4200 1150 0    50   ~ 0
+Power from USB
+Text Notes 4200 2700 0    50   ~ 0
+USB Serial Interface
+Wire Notes Line
+	4150 1000 4150 2450
+Wire Notes Line
+	4150 2450 6650 2450
+Wire Notes Line
+	6650 2450 6650 1000
+Wire Notes Line
+	6650 1000 4150 1000
+Wire Notes Line
+	4150 2550 4150 4950
+Wire Notes Line
+	4150 4950 6650 4950
+Wire Notes Line
+	6650 4950 6650 2550
+Wire Notes Line
+	6650 2550 4150 2550
+Text Notes 1050 1150 0    50   ~ 0
+USB Connection
+Wire Notes Line
+	1000 1000 1000 3000
+Wire Notes Line
+	1000 3000 4050 3000
+Wire Notes Line
+	4050 3000 4050 1000
+Wire Notes Line
+	4050 1000 1000 1000
+NoConn ~ 5800 4150
+Wire Wire Line
+	3650 2000 3650 1900
+$Comp
+L power:PWR_FLAG #FLG?
+U 1 1 5E2F6620
+P 3650 2000
+AR Path="/5E2F6620" Ref="#FLG?"  Part="1" 
+AR Path="/5E23F83D/5E2F6620" Ref="#FLG?"  Part="1" 
+AR Path="/5E2DF3BB/5E2F6620" Ref="#FLG0101"  Part="1" 
+F 0 "#FLG0101" H 3650 2075 50  0001 C CNN
+F 1 "PWR_FLAG" V 3650 2128 50  0000 L CNN
+F 2 "" H 3650 2000 50  0001 C CNN
+F 3 "~" H 3650 2000 50  0001 C CNN
+	1    3650 2000
+	-1   0    0    1   
+$EndComp
+Connection ~ 3650 1900
+Wire Wire Line
+	3650 1900 3750 1900
+Wire Wire Line
+	1650 1900 2600 1900
+$EndSCHEMATC

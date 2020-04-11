@@ -1,0 +1,15 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ARGB1313HS-TR
+D Triple LED RGB (Stanley Electric)
+K LED RGB
+F https://www.mouser.co.uk/datasheet/2/917/downloaddatafile-1504942.pdf
+$ENDCMP
+#
+$CMP ARGB1313HS-TR_common_anode
+D Triple LED RGB (Stanley Electric)
+K LED RGB
+F https://www.mouser.co.uk/datasheet/2/917/downloaddatafile-1504942.pdf
+$ENDCMP
+#
+#End Doc Library
